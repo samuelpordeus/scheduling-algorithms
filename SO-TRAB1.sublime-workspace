@@ -1,0 +1,790 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"input",
+				"input_values	statement"
+			],
+			[
+				"test",
+				"testLCS	function"
+			],
+			[
+				"A",
+				"A	statement"
+			],
+			[
+				"str1",
+				"str1c	statement"
+			],
+			[
+				"x",
+				"x	forstmt"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"selec",
+				"selection_test"
+			],
+			[
+				"p",
+				"p	statement"
+			],
+			[
+				"dfr",
+				"dframe	statement"
+			],
+			[
+				"np",
+				"np"
+			],
+			[
+				"US",
+				"USA"
+			],
+			[
+				"arang",
+				"arange_array	statement"
+			],
+			[
+				"my_ar",
+				"my_array2	statement"
+			],
+			[
+				"tag",
+				"tag_open	statement"
+			],
+			[
+				"vowel",
+				"vowelCount"
+			],
+			[
+				"req",
+				"request_bytes"
+			],
+			[
+				"Animal",
+				"AnimalForm"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "test.py",
+			"settings":
+			{
+				"buffer_size": 334,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/samuelspordeus/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 393,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "entrada.txt",
+			"settings":
+			{
+				"buffer_size": 21,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					""
+				],
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++11/C++11.sublime-build",
+					""
+				],
+				[
+					"Packages/C++11/C++11.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++11/C++11.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 372.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"packageco",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:package",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 60.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"2 + 2",
+			"c",
+			"h",
+			"help",
+			"google_search",
+			"google search",
+			"open_url",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/samuelspordeus/Documents/SO"
+	],
+	"file_history":
+	[
+		"/home/samuelspordeus/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/samuelspordeus/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/samuelspordeus/Documents/SO/entrada.txt",
+		"/home/samuelspordeus/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/samuelspordeus/Documents/apa/Programacao dinamica/LCS/dynamicLCS.py",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/models/user.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/layouts/application.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/articles/index.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/assets/stylesheets/custom.css.scss",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/Gemfile",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/migrate/20160927202528_add_password_digest_to_users.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/controllers/articles_controller.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/models/article.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/migrate/20160927121814_add_user_id_to_articles.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/migrate/20160914014844_create_users.rb",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_13.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_15.py",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/articles/show.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/articles/_form.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/shared/_errors.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/layouts/_messages.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/articles/new.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/articles/edit.html.erb",
+		"//",
+		"/home/samuelspordeus/Documents/mensagem-lavid/app/controllers/message_controller.rb",
+		"/home/samuelspordeus/Documents/mensagem-lavid/bin/bundle",
+		"/home/samuelspordeus/Documents/mensagem-lavid/app/controllers/application_controller.rb",
+		"/home/samuelspordeus/Documents/rails/myapp/app/views/people/index.html.erb",
+		"/home/samuelspordeus/Documents/rails/myapp/app/views/people/edit.html.erb",
+		"/home/samuelspordeus/Documents/rails/myapp/app/views/people/new.html.erb",
+		"/home/samuelspordeus/Documents/rails/myapp/app/views/people/_form.html.erb",
+		"/home/samuelspordeus/Documents/rails/myapp/config/routes.rb",
+		"/home/samuelspordeus/Documents/rails/myapp/Rakefile",
+		"/home/samuelspordeus/Documents/rails/myapp/app/views/layouts/application.html.erb",
+		"/home/samuelspordeus/Documents/rails/myapp/app/controllers/people_controller.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/assets/stylesheets/application.css",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/pages/home.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/layouts/_footer.html.erb",
+		"/home/samuelspordeus/Documents/rails/myapp/Gemfile",
+		"/home/samuelspordeus/Desktop/stuff/856208_492898934107336_1176960988_o.jpg",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/layouts/_navigation.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/views/layouts/home.html.erb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/assets/javascripts/application.js",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/config/routes.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/migrate/20160905221140_add_description_to_articles.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/migrate/20160905220057_create_articles.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/development.sqlite3",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/db/schema.rb",
+		"/home/samuelspordeus/Documents/rails/myapp/app/models/person.rb",
+		"/home/samuelspordeus/Documents/rails/mongo_test/Gemfile",
+		"/home/samuelspordeus/Documents/rails/mongo_test/config/database.yml",
+		"/home/samuelspordeus/Documents/rails/mongo_test/config/initializers/mongoid.rb",
+		"/home/samuelspordeus/Documents/rails/mongo_test/config/application.rb",
+		"/home/samuelspordeus/untitled.py",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/controllers/pages_controller.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/app/controllers/application_controller.rb",
+		"/home/samuelspordeus/Documents/rails/alpha-blog/config/boot.rb",
+		"/home/samuelspordeus/samuelpordeus.github.io/index.html",
+		"/home/samuelspordeus/samuelpordeus.github.io/_includes/footer.html",
+		"/home/samuelspordeus/samuelpordeus.github.io/_posts/2016-08-29-grafico-bna-rj.md",
+		"/home/samuelspordeus/samuelpordeus.github.io/_posts/2016-06-29-diario-de-bordo.md",
+		"/home/samuelspordeus/samuelpordeus.github.io/_posts/2016-08-25-trab-apa.md",
+		"/home/samuelspordeus/samuelpordeus.github.io/feed.xml",
+		"/home/samuelspordeus/Downloads/hsteix(1).html",
+		"/home/samuelspordeus/samuelpordeus.github.io/Vagrantfile",
+		"/home/samuelspordeus/Downloads/hsteix.html",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/APA_T1/Logs/Quick.log",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/APA_T1/Logs/Merge.log",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/APA_T1/Logs/Insertion.log",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/APA_T1/Logs/Heap.log",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/APA_T1/Logs/Default.log",
+		"/home/samuelspordeus/Downloads/APA-TRABALHO-03(1).html",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/APA_T1/Logs/Selection.log",
+		"/home/samuelspordeus/Downloads/APA-TRABALHO-03.html",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/resultados_100",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/resultados_50",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/entradas_10/test3.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/resultados_10",
+		"/home/samuelspordeus/Documents/APA-TRABALHO (copy)/python_code/test.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO (copy)/python_code/selectionsort.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/entradas_10/test.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_9.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_8.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_22.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_21.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_20.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_19.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_18.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_16.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_17.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/entradas_10/sort.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/entradas_10/test2.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/entradas_10/glob.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/mergesort.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/selectionsort.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/quicksort.py",
+		"/home/samuelspordeus/Documents/APA-TRABALHO/heapsort.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/entradas_10/sort.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/entradas_10/test.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/entradas_10/test.in",
+		"/home/samuelspordeus/Documents/cormen/cap2/entradas_10/vector.in",
+		"/home/samuelspordeus/Documents/cormen/cap2/entradas_10/output.in",
+		"/home/samuelspordeus/Documents/cormen/cap2/mergesort.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/insertionsort.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/sort.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/test.py",
+		"/home/samuelspordeus/Documents/python/pokedex.py",
+		"/home/samuelspordeus/Documents/python/pokedex2.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/selectionsort.py",
+		"/home/samuelspordeus/Documents/cormen/cap2/quicksort.py",
+		"/home/samuelspordeus/Documents/data/python_codes/test.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_7.py",
+		"/home/samuelspordeus/Documents/data/python_codes/pokemons.html",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_14.py",
+		"/home/samuelspordeus/Documents/data/python_codes/pokemons.txt",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_12_test.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_11.py",
+		"/home/samuelspordeus/Documents/data/python_codes/lecture_10.py",
+		"/home/samuelspordeus/Documents/python/capstone/reversestring.py",
+		"/home/samuelspordeus/Documents/python/pokemons.html",
+		"/home/samuelspordeus/Documents/python/pep8 style guidelines",
+		"/home/samuelspordeus/Documents/python/gui/interact.py",
+		"/home/samuelspordeus/Documents/python/testfile~",
+		"/home/samuelspordeus/Documents/python/capstone/fizzbuzz.py",
+		"/home/samuelspordeus/Documents/python/Untitled.ipynb",
+		"/home/samuelspordeus/samuelpordeus.github.io/_layouts/page.html",
+		"/home/samuelspordeus/samuelpordeus.github.io/_includes/header.html",
+		"/home/samuelspordeus/samuelpordeus.github.io/_site/about/index.html"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/samuelspordeus/samuelpordeus.github.io",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sorted",
+			"enable_sign",
+			"longest_common",
+			"lcs",
+			"Y",
+			"X",
+			"0",
+			"sqlite",
+			"<p align=\"justify\">",
+			"theme by",
+			"lst",
+			"fst",
+			"sqc",
+			"begin",
+			"array",
+			"datetime.datetime.now()",
+			"zzz",
+			"print",
+			"A",
+			"max",
+			"positionOfMax",
+			"alist",
+			"r",
+			"p",
+			"alist",
+			"())\n",
+			"89",
+			"arr2d",
+			"arr",
+			"slice_of_arr",
+			")",
+			"one_array",
+			"79",
+			"reverse_string",
+			"foot",
+			"e8dace",
+			"foot",
+			"SAMUEL S.",
+			"hover",
+			"0085a1",
+			"highlight",
+			"foot",
+			"header",
+			"foot",
+			"title",
+			"avatar",
+			"avatar-icon.png",
+			"avatar-icon",
+			"avatar",
+			"twitter",
+			"twitter.com",
+			"posts",
+			"about",
+			"posts",
+			"rss",
+			"rs",
+			"USERNAME",
+			"subscribe",
+			"awesome",
+			"logCreate",
+			"req_index",
+			"file_bytes",
+			"tratarString",
+			"processFile",
+			"mutex",
+			"cout",
+			"sockfd",
+			"content",
+			"buf",
+			".ico",
+			"type",
+			"bytes_written",
+			"processFile",
+			"resp04",
+			"n",
+			"file",
+			"sd",
+			"bytes",
+			"ip_string",
+			"files",
+			"barrier",
+			"lock",
+			"__sync_fetch_and_add",
+			"main_socket",
+			"using name",
+			"client",
+			"join",
+			"addr",
+			"get",
+			"question",
+			"\n",
+			"is_get",
+			"append",
+			")\n",
+			"temp",
+			"1",
+			"if win_1 = True:\n        print(\"Jogador 1 ganhou!\")",
+			")\n",
+			"elif:",
+			"win_1",
+			"X",
+			"False",
+			"\")\n",
+			"y",
+			"while",
+			"]))\n",
+			"barrier",
+			"void",
+			"push_back",
+			"void",
+			">",
+			"> ",
+			"length",
+			"barrier",
+			"travada na barreira",
+			"travada na barriera",
+			"arrive",
+			");\n",
+			");",
+			"lock",
+			";\n",
+			"monitor",
+			"count",
+			"0",
+			"apple",
+			"    \n",
+			"query",
+			"close"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"lcs",
+			"common",
+			"longest_common",
+			"str2",
+			"str1",
+			"end",
+			"start",
+			"lista",
+			"start",
+			"lista",
+			"timenow()",
+			"lista",
+			"max_value",
+			"max",
+			"lista",
+			"end",
+			"start",
+			"lista",
+			"f2eae3",
+			"facebook",
+			"samuelpordeus",
+			"processReq",
+			"main_socket",
+			"file_bytes",
+			"bytes",
+			"fileSize",
+			"true_get",
+			"socket_local",
+			"ip_char",
+			"sockfd",
+			"s_add",
+			"animal",
+			"is_valid",
+			"hand",
+			"elif",
+			"win_2",
+			"O",
+			"barriera",
+			"num_cavalos"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/samuelspordeus/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								185,
+								185
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "entrada.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13,
+								13
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CppBuilder":
+	{
+		"height": 255.0
+	},
+	"output.exec":
+	{
+		"height": 116.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Anaconda Python Builder",
+	"project": "SO-TRAB1.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"test.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
