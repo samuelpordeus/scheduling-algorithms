@@ -13,9 +13,11 @@ def average_wait_time(lines):
     for index in range(1, len(lines)):
         at = lines[index][0]
         wt += lines[index - 1][1]
+        # print(wt)
         awt += wt - at
-    return awt / len(lines)
+    return (awt / len(lines)) - 1
 
+# 0 + 20 + 30 + 32 + 38 + 42 + 50
 
 def average_response_time(lines):
     awt, at = 0, 0
@@ -24,7 +26,7 @@ def average_response_time(lines):
         at = lines[index][0]
         wt += (lines[index - 1][1])
         awt += wt - at
-    return awt / len(lines)
+    return (awt / len(lines)) - 1
 
 
 def average_turnaround_time(lines):
@@ -38,7 +40,7 @@ def average_turnaround_time(lines):
         ct = wt + bt
         tt = ct - at
         att += tt
-    return att / len(lines)
+    return (att / len(lines)) - 1
 
 
 def average_time(jobs_list, name):
@@ -48,15 +50,23 @@ def average_time(jobs_list, name):
     print(name + " " + str(round(att, 1)) + " " +
           str(round(art, 1)) + " " + str(round(awt, 1)))
 
+
 def sjf(lines):
-    jobs = sorted(lines, key=lambda lines: lines[0])
-    for index in range(0, len(jobs)):
-        ct = (jobs[index][1] + jobs[index][0])
-        jobs[index].append(ct)
-    jobs = sorted(jobs, key=lambda jobs: jobs[2])
-    for index in range(0, len(jobs)):
-        del jobs[index][2]
-    average_time(jobs, 'SJF')
+    total_time = 0
+    time = 0
+    process = []
+    jobs = sorted(lines, key=lambda jobs: (jobs[0], jobs[1]))
+    while jobs:
+        if time >= jobs[0][0]:
+            process.append(jobs[0])
+            time += jobs[0][1]
+            del jobs[0]
+            if jobs:
+                jobs.sort(key=lambda jobs: jobs[1])
+        else:
+            jobs.sort(key=lambda jobs:jobs[0])
+            time += 1
+    average_time(process, 'SJF')
 
 
 def fcfs(lines):
@@ -65,7 +75,7 @@ def fcfs(lines):
 
 
 def rr(lines):
-    jobs = sorted(lines, key=lambda lines: lines[1] if lines[1] <= 2 else lines[0])
+    jobs = sorted(lines, key=lambda lines: lines[1] if lines[1] >= 2 else lines[0])
     average_time(jobs, 'RR')
 
 fcfs(input_values)
