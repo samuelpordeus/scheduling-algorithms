@@ -84,30 +84,47 @@ def fcfs(lines):
     average_time(jobs, 'FCFS')
 
 
+def realocate(wait, ready, lines, time):
+    for index in range(len(lines)):
+        if lines[index][0] <= time:
+            ready.append(lines[index])
+        else:
+            wait.append(lines[index])
+
 def rr(lines):
-    time, triggered, avg, avt, get = 0, False, [], 0, 0
+    time, triggered, avg, avt, = 0, False, 0, []
     quantum = 2
-    # ready = []
-    # ready = [x for x in lines if x[0] <= time and x[1] > 0]
-    while lines:
-        for index in range(len(lines)):
-            print(lines)
-            if lines[index][1] > quantum:
-                time += 2
-                lines[index][1] -= 2
-            elif len(lines) >= 1:
-                time += lines[index][1]
-                avg.append(time - lines[index][0])
-                get = index
-                triggered = True
-            else:
-                time += lines[index][1]
-        if triggered == True and lines[get]:
-            del lines[get]
+    triggered2 = False
+    aux = []
+    ready = []
+    wait = []
+    wait_clone = []
+    for index in range(len(lines)):
+        lines[index].append(int(index))
+    realocate(wait, ready, lines, time)
+    while ready:
+        print(time, ready[0][2])
+        if ready[0][1] > quantum:
+            time += 2
+            ready[0][1] -= 2
+            aux = ready[0]
+            ready.append(aux)
+            del ready[0]
+        else:
+            time += ready[0][1]
+            print(time)
+            triggered = True
+            avt.append(time - ready[0][0])
+        if triggered:
+            del ready[0]
             triggered = False
-    for index in range(len(avg)):
-        avt += avg[index]
-    print(avt/len(avg))
+        for index in range(len(wait) - 1, -1, -1):
+            if wait[index][0] < time:
+                ready.insert(0, wait[index])
+        wait = [x for x in wait if x[0] >= time]
+    for index in range(len(avt)):
+        avg += avt[index]
+    print(avg/len(avt))
 fcfs(input_values)
 sjf(input_values)
 rr(input_values)
