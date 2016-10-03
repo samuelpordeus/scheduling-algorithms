@@ -7,6 +7,3 @@ for line in file.readlines():
         a, b = line.split()
         values = [float(a), float(b)]
         input_values.append(values)
-fcfs(input_values)
-sjf(input_values)
-rr(input_values)

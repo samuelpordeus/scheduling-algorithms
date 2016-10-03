@@ -18,24 +18,6 @@ def average_wait_time(lines):
     return (awt / len(lines))
 
 
-def average_response_time(lines):
-    awt, at = 0, 0
-    wt = lines[0][0]
-    for index in range(1, len(lines)):
-        at = lines[index][0]
-        wt += (lines[index - 1][1])
-        awt += wt - at
-    return (awt / len(lines))
-
-def average_response_time_rr(lines):
-    flag = True
-    for index in range(0, len(lines)):
-        if lines[index][2] > 0:
-            flag = False
-    if flag == True:
-        return 2.0
-    return 2.0
-
 def average_turnaround_time(lines):
     at, bt, ct = 0, 0, 0
     wt = lines[0][0]
@@ -50,6 +32,26 @@ def average_turnaround_time(lines):
     return (att / len(lines))
 
 
+def average_response_time(lines):
+    awt, at = 0, 0
+    wt = lines[0][0]
+    for index in range(1, len(lines)):
+        at = lines[index][0]
+        wt += (lines[index - 1][1])
+        awt += wt - at
+    return (awt / len(lines))
+
+
+def average_response_time_rr(lines):
+    flag = True
+    for index in range(0, len(lines)):
+        if lines[index][2] > 0:
+            flag = False
+    if flag:
+        return 2.0
+    return 2.0
+
+
 def average_time(jobs_list, name):
     awt = average_wait_time(jobs_list)
     att = average_turnaround_time(jobs_list)
@@ -57,7 +59,8 @@ def average_time(jobs_list, name):
         art = average_response_time_rr(jobs_list)
     else:
         art = average_response_time(jobs_list)
-    print(name + " " + str(round(att, 1)) + " " + str(round(art, 1)) + " " + str(round(awt, 1)))
+    print(name + " " + str(round(att, 1)) + " " +
+          str(round(art, 1)) + " " + str(round(awt, 1)))
 
 
 def sjf(lines):
@@ -72,7 +75,6 @@ def sjf(lines):
             if jobs:
                 jobs.sort(key=lambda jobs: jobs[1])
         else:
-            # jobs.sort(key=lambda jobs: jobs[0])
             time += 1
     average_time(process, 'SJF')
 
@@ -83,24 +85,32 @@ def fcfs(lines):
 
 
 def rr(lines):
+    time, clock, avg = 0, 0, 0
+    quantum = 2
     process = []
-    jobs = sorted(lines, key=lambda jobs: (jobs[0]))
+    jobs = sorted(lines, key=lambda jobs: jobs[0])
     for index in range(len(jobs)):
-        jobs[index].append(2.0)
-        jobs[index][2] -= jobs[index][1]
-    jobs = sorted(lines, key=lambda jobs: jobs[2] if jobs[2] > 0 else jobs[0])
+        jobs[index].append(index)
+        jobs[index].append(0.0)
+        jobs[index].append(True)
     # print(jobs)
-    while jobs:
-        jobs[0][2] -= jobs[0][1]
-        if jobs[0][2] > 0:
-            process.append(jobs[0])
-            print(process)
-            del jobs[0]
-        else:
-            process.append(jobs[0])
-            break
-    average_time(jobs, 'RR')
+    while len(process) != len(jobs):
+        for index in range(len(jobs)):
+            if jobs[index][4] and time >= jobs[index][0]:
+                print("Rodar processo [" + str(jobs[index][2]) + "] de " + "["+ str(time) + "]"  + " ate " + "[" + str(time + 2) + "]")
+                if (jobs[index][1] - quantum) > 0:
+                    jobs[index][1] -= quantum
+                    time += quantum
+                else:
+                    time += (jobs[index][1])
+                    tt = time - jobs[index][0]
+                    process.append([jobs[index][2], tt])
+                    jobs[index][4] = False
+    for index in range(len(process)):
+        avg += process[index][1]
+    print(process)
+    print(avg/len(process))
 
 fcfs(input_values)
 sjf(input_values)
-rr(input_values)
+# rr(input_values)
