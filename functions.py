@@ -85,32 +85,29 @@ def fcfs(lines):
 
 
 def rr(lines):
-    time, clock, avg = 0, 0, 0
+    time, triggered, avg, avt, get = 0, False, [], 0, 0
     quantum = 2
-    process = []
-    jobs = sorted(lines, key=lambda jobs: jobs[0])
-    for index in range(len(jobs)):
-        jobs[index].append(index)
-        jobs[index].append(0.0)
-        jobs[index].append(True)
-    # print(jobs)
-    while len(process) != len(jobs):
-        for index in range(len(jobs)):
-            if jobs[index][4] and time >= jobs[index][0]:
-                print("Rodar processo [" + str(jobs[index][2]) + "] de " + "["+ str(time) + "]"  + " ate " + "[" + str(time + 2) + "]")
-                if (jobs[index][1] - quantum) > 0:
-                    jobs[index][1] -= quantum
-                    time += quantum
-                else:
-                    time += (jobs[index][1])
-                    tt = time - jobs[index][0]
-                    process.append([jobs[index][2], tt])
-                    jobs[index][4] = False
-    for index in range(len(process)):
-        avg += process[index][1]
-    print(process)
-    print(avg/len(process))
-
+    # ready = []
+    # ready = [x for x in lines if x[0] <= time and x[1] > 0]
+    while lines:
+        for index in range(len(lines)):
+            print(lines)
+            if lines[index][1] > quantum:
+                time += 2
+                lines[index][1] -= 2
+            elif len(lines) >= 1:
+                time += lines[index][1]
+                avg.append(time - lines[index][0])
+                get = index
+                triggered = True
+            else:
+                time += lines[index][1]
+        if triggered == True and lines[get]:
+            del lines[get]
+            triggered = False
+    for index in range(len(avg)):
+        avt += avg[index]
+    print(avt/len(avg))
 fcfs(input_values)
 sjf(input_values)
-# rr(input_values)
+rr(input_values)
