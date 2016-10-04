@@ -107,67 +107,47 @@ def rr_debug_aux(lines):
 
 def rr_ready_wait(lines, wait, ready, time):
     for index in range(len(lines)):
-        lines[index].append(index)
         lines[index].append(lines[index][1])
         if lines[index][0] <= time:
             ready.append(lines[index])
         else:
             wait.append(lines[index])
 
+
 def rr(lines):
     avt, wait, ready, avw, aux = [], [], [], [], []
     time = 0
     triggered = False
     quantum = 2
-    flag = 0
-    for index in range(len(lines)):
-        if lines[index][1] % 2 != 0:
-            flag += 1
+    sum_t, sum_w = 0, 0
     if lines[0][0] == 0:
         rr_ready_wait(lines, wait, ready, 0)
     else:
         time = lines[0][0]
         rr_ready_wait(lines, wait, ready, time)
-
-    while ready:
-        if wait:
-            if wait[0][0] <= time:
-                ready += [x for x in wait if x[0] <= time]
-                wait = [x for x in wait if x[0] > time]
+    while len(avt) < len(lines):
+        ready += [x for x in wait if x[0] <= time]
+        wait = [x for x in wait if x[0] > time]
         if aux:
             ready.append(aux)
             aux = []
         if ready:
-            if ready[0][1] > quantum:
+            if ready[0][2] > quantum:
+                ready[0][2] -= quantum
                 time += quantum
-                ready[0][1] -= quantum
                 aux = ready[0]
                 del ready[0]
-                if not ready:
-                    ready.append(aux)
-                    aux = []
             else:
-                time += ready[0][1]
+                time += ready[0][2]
                 avt.append(time - ready[0][0])
-                avw.append(((time - ready[0][0]) - ready[0][3]))
+                avw.append((time - ready[0][0]) - ready[0][1])
                 del ready[0]
-        if not ready:
-            if aux:
-                ready.append(aux)
-                aux = []
-            elif wait:
-                ready.append(wait[0])
-                del wait[0]
-
-    sum_t = 0
-    sum_w = 0
     for index in range(len(avt)):
         sum_t += avt[index]
+    for index in range(len(avt)):
         sum_w += avw[index]
-    if flag > 0:
-        flag = flag * 0.5
-    print("RR " + str(round(sum_t/len(avt) - flag, 1)) + " " + "2.0" + " " + str(round(sum_w/len(avw) - flag, 1)) )
 
+    print(round(avg/len(avt), 1))
 fcfs(input_values)
 sjf(input_values)
 rr(input_values)

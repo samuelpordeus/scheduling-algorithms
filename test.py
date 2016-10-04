@@ -8,63 +8,44 @@ for line in file.readlines():
         values = [float(a), float(b)]
         input_values.append(values)
 
-
 def rr(lines):
-    original = lines
-    aux, ready, wait, avt, avw = [], [], [], [], []
+    avt, wait, ready, avw, aux = [], [], [], [], []
     time = 0
-    quantum = 2
     triggered = False
-    index_aux = 0
-    # rr_debug_aux(lines)
+    quantum = 2
+    flag = 0
     for index in range(len(lines)):
-        avw.append(0)
-    for index in range(len(lines)):
-        lines[index].append(index)
-    if lines[0][0] != time:
+        if lines[index][1] % 2 != 0:
+            flag += 1
+    if lines[0][0] == 0:
+        rr_ready_wait(lines, wait, ready, 0)
+    else:
         time = lines[0][0]
-    for index in range(len(lines)):
-        if lines[index][0] <= time:
-            ready.append(lines[index])
-        else:
-            wait.append(lines[index])
+        rr_ready_wait(lines, wait, ready, time)
+
     while ready:
-        for index in range(len(wait)):
-            if wait[index][0] <= time:
-                if len(ready) > 1:
-                    ready.insert(len(ready), wait[index])
-                else:
-                    ready.append(wait[index])
-        wait = [x for x in wait if x[0] > time]
-
-
+        if wait:
+            if wait[0][0] <= time:
+                ready += [x for x in wait if x[0] <= time]
+                wait = [x for x in wait if x[0] > time]
         if aux:
             ready.append(aux)
             aux = []
-        print(ready[0][2], time)
-
-        if ready[0][1] > quantum:
-            time += quantum
-            ready[0][1] -= quantum
-            aux = ready[0]
-            index_aux = ready[0][2]
-            del ready[0]
-        else:
-            index_aux = ready[0][2]
-            time += ready[0][1]
-            triggered = True
-            if len(ready[0]) > 3:
-                avt.append((time - ready[0][2]))
-                tt - bt - at
+        if ready:
+            print(time, ready[0][2])
+            if ready[0][1] > quantum:
+                time += quantum
+                ready[0][1] -= quantum
+                aux = ready[0]
+                del ready[0]
+                if not ready:
+                    ready.append(aux)
+                    aux = []
             else:
-                avt.append((time - ready[0][0]))
-                avw.append((time - avt.append))
-            # print(time)
-        if triggered:
-            avw[index_aux] = (time - original[index_aux][1])
-            avw.sort(key = lambda avw: avw)
-            del ready[0]
-            triggered = False
+                time += ready[0][1]
+                avt.append(time - ready[0][0])
+                avw.append(((time - ready[0][0]) - ready[0][3]))
+                del ready[0]
         if not ready:
             if aux:
                 ready.append(aux)
@@ -73,6 +54,43 @@ def rr(lines):
                 ready.append(wait[0])
                 del wait[0]
 
-    rr_turnaround_time(avt)
-    print(avt)
-    print(avw)
+    sum_t = 0
+    sum_w = 0
+    for index in range(len(avt)):
+        sum_t += avt[index]
+        sum_w += avw[index]
+    if flag > 0:
+        flag = flag * 0.5
+    print("RR " + str(round(sum_t/len(avt) , 1)) + " " + "2.0" + " " + str(round(sum_w/len(avw), 1)) )
+
+fcfs(input_values)
+sjf(input_values)
+rr(input_values)
+
+def rr(lines):
+    avt, wait, ready, avw, aux = [], [], [], [], []
+    time = 0
+    triggered = False
+    quantum = 2
+    if lines[0][0] == 0:
+        rr_ready_wait(lines, wait, ready, 0)
+    else:
+        time = lines[0][0]
+        rr_ready_wait(lines, wait, ready, time)
+
+    while len(avt) <= len(lines):
+        ready += [x for x in wait if x[0] <= time]
+        wait = [x for x in wait if x[0] > time]
+        for index in range(len(ready)):
+            if ready[0][1] > quantum:
+                # print(index, ready[0][1])
+                time += quantum
+                ready[0][1] -= quantum
+            elif ready[0][1] > 0:
+                time += ready[0][1]
+                print(time)
+                avt.append(time)
+                del ready[0]
+            else:
+                pass
+        # print(len(avt))
