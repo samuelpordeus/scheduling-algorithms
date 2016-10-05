@@ -1,12 +1,3 @@
-input_values = []
-file = open('entrada.txt')
-for line in file.readlines():
-    if '\n' in line or line:
-        a, b = line.split()
-        values = [float(a), float(b)]
-        input_values.append(values)
-
-
 def average_wait_time(lines):
     awt, at = 0, 0
     wt = lines[0][0]
@@ -108,6 +99,7 @@ def rr_debug_aux(lines):
 def rr_ready_wait(lines, wait, ready, time):
     for index in range(len(lines)):
         lines[index].append(lines[index][1])
+        lines[index].append(False)
         if lines[index][0] <= time:
             ready.append(lines[index])
         else:
@@ -115,11 +107,10 @@ def rr_ready_wait(lines, wait, ready, time):
 
 
 def rr(lines):
-    avt, wait, ready, avw, aux = [], [], [], [], []
+    avt, wait, ready, avw, avr, aux = [], [], [], [], [], []
     time = 0
-    triggered = False
     quantum = 2
-    sum_t, sum_w = 0, 0
+    sum_t, sum_w, sum_r = 0, 0, 0
     if lines[0][0] == 0:
         rr_ready_wait(lines, wait, ready, 0)
     else:
@@ -132,6 +123,9 @@ def rr(lines):
             ready.append(aux)
             aux = []
         if ready:
+            if not ready[0][3]:
+                ready[0][3] = True
+                avr.append(time - ready[0][0])
             if ready[0][2] > quantum:
                 ready[0][2] -= quantum
                 time += quantum
@@ -146,8 +140,6 @@ def rr(lines):
         sum_t += avt[index]
     for index in range(len(avt)):
         sum_w += avw[index]
-
-    print(round(avg/len(avt), 1))
-fcfs(input_values)
-sjf(input_values)
-rr(input_values)
+    for index in range(len(avt)):
+        sum_r += avr[index]
+    print("RR " + str(round(sum_t / len(avt), 1)) + " " + str(round(sum_r / len(avr), 1)) + " " + str(round(sum_w / len(avt), 1)))
